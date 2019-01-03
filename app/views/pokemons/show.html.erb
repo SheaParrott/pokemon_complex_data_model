@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pokemon.name %>
+</p>
+
+<p>
+  <strong>National dex number:</strong>
+  <%= @pokemon.national_dex_number %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @pokemon.region.region %>
+</p>
+
+<%= link_to 'Edit', edit_pokemon_path(@pokemon) %> |
+<%= link_to 'Back', pokemons_path %>
