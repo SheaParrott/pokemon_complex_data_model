@@ -1,4 +1,4 @@
-<%= form_with(model: pokemon, local: true) do |form| %>
+<%= form_with(model: [:admin, pokemon], local: true) do |form| %>
   <% if pokemon.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(pokemon.errors.count, "error") %> prohibited this pokemon from being saved:</h2>

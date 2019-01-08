@@ -1,6 +1,6 @@
-class CreatePokemons < ActiveRecord::Migration[5.2]
+class Createpokemon < ActiveRecord::Migration[5.2]
   def change
-    create_table :pokemons do |t|
+    create_table :pokemon do |t|
       t.string :name
       t.integer :national_dex_number
       t.references :region, foreign_key: true

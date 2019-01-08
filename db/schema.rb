@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_03_214355) do
+ActiveRecord::Schema.define(version: 2019_01_08_193417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "pokemons", force: :cascade do |t|
+  create_table "pokemon", force: :cascade do |t|
     t.string "name"
     t.integer "national_dex_number"
     t.bigint "region_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["region_id"], name: "index_pokemons_on_region_id"
+    t.index ["region_id"], name: "index_pokemon_on_region_id"
   end
 
   create_table "regions", force: :cascade do |t|
@@ -30,5 +30,5 @@ ActiveRecord::Schema.define(version: 2019_01_03_214355) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "pokemons", "regions"
+  add_foreign_key "pokemon", "regions"
 end

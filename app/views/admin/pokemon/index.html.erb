@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pokemons</h1>
+<h1>pokemon</h1>
 
 <table>
   <thead>
@@ -13,14 +13,14 @@
   </thead>
 
   <tbody>
-    <% @pokemons.each do |pokemon| %>
+    <% @pokemon.each do |pokemon| %>
       <tr>
         <td><%= pokemon.name %></td>
         <td><%= pokemon.national_dex_number %></td>
         <td><%= pokemon.region.region %></td>
-        <td><%= link_to 'Show', pokemon %></td>
-        <td><%= link_to 'Edit', edit_pokemon_path(pokemon) %></td>
-        <td><%= link_to 'Destroy', pokemon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', [:admin, pokemon] %></td>
+        <td><%= link_to 'Edit', [:edit, :admin, pokemon] %></td>
+        <td><%= link_to 'Destroy', [:admin, pokemon], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Pokemon', new_pokemon_path %>
+<%= link_to 'New Pokemon', new_admin_pokemon_path %>
